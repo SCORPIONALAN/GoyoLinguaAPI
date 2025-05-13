@@ -14,7 +14,7 @@ Si el usuario pregunta algo fuera de tema, responde:
 
 export const chatQuestion = async (req, res) => {
   const { question, uid } = req.body;
-  const username = uid;
+  const {username} = req.data;
 
   if (!question || !uid) {
     return res.status(400).json({
